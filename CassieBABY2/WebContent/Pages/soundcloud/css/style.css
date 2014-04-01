@@ -1,0 +1,207 @@
+/* Icons font
+
+  UTF chars -> icons:
+
+  \0031 - previous track
+  \0032 - next track
+  \0033 - delete
+  \0034 - add
+  \0035 - edit
+  \0036 - pause
+  \0037 - play
+  \0038 - stop
+
+ **/
+@font-face {
+    font-family: 'IcoMoon';
+    src: url('../type/icomoon.eot');
+    src: url('../type/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('../type/icomoon.woff') format('woff'),
+        url('../type/icomoon.ttf') format('truetype'),
+        url('../type/icomoon.svg#IcoMoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin:0;
+    padding:0;
+    font-size:100%;
+}
+body {
+    font-family:"Lucida Grande", Helvetica, Arial, sans-serif;
+    line-height:1.5;
+}
+/* Generic classes
+=====================================================================*/
+.hidden {
+    display:none;
+}
+.button {
+    background:#DAE8F6;
+    border-radius:7px 0 7px 0;
+    cursor:pointer;
+}
+.list {
+    color:#06C;
+    padding-left:10px;
+}
+    .list li {
+        list-style:none;
+        margin:0 0 6px;
+        cursor:pointer;
+    }
+        .list li:active {
+            -webkit-transform: translate(0, 1px);
+            -moz-transform: translate(0, 1px);
+            -o-transform: translate(0, 1px);
+            transform: translate(0, 1px);
+        }
+.disabled {
+    opacity:.4;
+}
+.loading {
+    background:rgba(255, 255, 255, .75);
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+}
+body {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/* Page
+=====================================================================*/
+.page-header {
+    background-color:#f60;
+    background-image:-webkit-linear-gradient(#F60, #F30);
+    background-image:-moz-linear-gradient(#F60, #F30);
+    background-image:-ms-linear-gradient(#F60, #F30);
+    background-image:-o-linear-gradient(#F60, #F30);
+    background-image:linear-gradient(#F60, #F30);
+    color:#fff;
+    font-size:20px;
+    padding:6px 10px;
+    position:relative;
+}
+    .page-title {
+        text-align:center;
+    }
+    .page-back {
+        position:absolute;
+        left:6px;
+        top:10px;
+        border-radius:4px;
+        padding:1px 5px;
+        border:1px solid #fff;
+        background:rgba(255, 149, 69, 0.5);
+        color:rgba(255, 255, 255, .8);
+        font-size:14px;
+        margin-right:3px;
+        cursor: pointer;
+    }
+        .page-back:active {
+            -webkit-transform: translate(0, 1px);
+            -moz-transform: translate(0, 1px);
+            -o-transform: translate(0, 1px);
+            transform: translate(0, 1px);
+        }
+
+/* Playlists
+=====================================================================*/
+.playlists-new {
+    display:block;
+    line-height:30px;
+    padding-left:10px;
+    margin:6px 10px;
+    text-align:left;
+}
+
+/* Playlist
+=====================================================================*/
+.playlist .delete {
+    position:absolute;
+    right:10px;
+    top:4px;
+}
+    .playlist .delete:active {
+        -webkit-transform: translate(0, 1px);
+        -moz-transform: translate(0, 1px);
+        -o-transform: translate(0, 1px);
+        transform: translate(0, 1px);
+    }
+.playlist-controls {
+    padding:6px 10px;
+}
+    .playlist-controls .button {
+        display:inline-block;
+        text-transform:capitalize;
+        height:24px;
+        padding:0 5px;
+    }
+        .playlist-controls .button:active {
+            -webkit-transform: translate(0, 1px);
+            -moz-transform: translate(0, 1px);
+            -o-transform: translate(0, 1px);
+            transform: translate(0, 1px);
+        }
+
+.playlist-description {
+    background:#eee;
+    color:#222;
+    margin:6px 5px;
+    padding:6px 5px;
+}
+
+/* Tracks 
+=====================================================================*/
+.tracks li {
+    position:relative;
+    margin:0 0 6px;
+    padding-left:18px;
+}
+.tracks .toggler {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    width:18px;
+}
+.tracks .toggler:before {
+    font-family: 'IcoMoon';
+    font-weight:normal;
+    content:"\0037";
+    color:#000;
+}
+.tracks .playing .toggler:before {
+    content:"\0036";
+}
+.tracks .controls {
+    position:absolute;
+    right:0;
+    top:4px;
+    color:#000;
+    font-size:.9em;
+    display:none;
+}
+    .tracks .track:first-child .up,
+    .tracks .track:last-child .down {
+        color:#bbb;
+    }
+.tracks .editing .controls {
+    display:block;
+}
+.track.current {
+    font-weight:bold;
+}
+.track .time {
+    font-weight:normal;
+    color:#555;
+}
+
+/* Search
+=====================================================================*/
+.search-view form,
+.search-view .list {
+    padding:6px 10px;
+}
